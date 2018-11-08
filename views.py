@@ -11,6 +11,6 @@ class ProductTemplateView:
 
     def template_insert(self, instance):
         instance.description = input('Descrição: ')
-        instance.price = input('Preço: ')
-        instance.stock = input('Estoque: ')
+        instance.price = float(input('Preço: '))
+        instance.stock = int(input('Estoque: '))
 

@@ -6,4 +6,4 @@ class Product:
         self.stock = stock
 
     def __repr__(self):
-        return f'Product ({self.description}, {self.price})'
+        return f'Product ({self.description}, {self.price}, {self.stock})'
