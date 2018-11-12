@@ -6,7 +6,11 @@ class ProductTemplateView:
         =============
         1 - Cadastrar
         2 - Listar
-        3 - Sair
+        3 - Atualizar
+        4 - Excluir
+        5 - Exportar (CSV)
+        6 - Importar (CSV)
+        7 - Sair
         : """
 
     def template_insert(self, instance):
