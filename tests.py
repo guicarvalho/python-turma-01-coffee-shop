@@ -9,6 +9,9 @@ class ProductModelTestCase(unittest.TestCase):
 
     def setUp(self):
         self.product = Product('Cafe colonial setup', 30, 3)
+        # TODO: remover as linhas abaixo. Exemplo para subir banco em memória para testes integrados.
+        # self.conn = sqlite3.connect(':memory:')
+        # self.cursor = self.conn.cursor()
 
     def tearDown(self):
         del self.product
