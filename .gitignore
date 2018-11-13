@@ -1,5 +1,4 @@
-
-# Created by https://www.gitignore.io/api/vim,django
+reated by https://www.gitignore.io/api/vim,django
 # Edit at https://www.gitignore.io/?templates=vim,django
 
 ### Django ###
@@ -144,5 +143,8 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+*.db
+*.csv
 
 # End of https://www.gitignore.io/api/vim,django
