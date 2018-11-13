@@ -1,0 +1,6 @@
+flake8
+ipdb
+isort
+ipython
+neovim
+

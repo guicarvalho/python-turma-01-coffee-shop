@@ -1,0 +1,28 @@
+version: "3"
+services:
+
+  web:
+    build: .
+    volumes:
+      - .:/src
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SETTINGS_MODULE: coffee_shop.development_settings
+    depends_on:
+      - db
+
+  db:
+    image: postgres:11
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123mudar
+      POSTGRES_DB: coffee_shop
+    volumes:
+      - pg-data:/var/lib/postgres/data
+
+volumes:
+  pg-data:
+
