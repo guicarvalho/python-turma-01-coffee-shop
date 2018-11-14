@@ -146,5 +146,6 @@ tags
 
 *.db
 *.csv
+.env
 
 # End of https://www.gitignore.io/api/vim,django

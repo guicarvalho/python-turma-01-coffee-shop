@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <h1>Produtos</h1>
+    <ul>
+    {% for product in object_list %}
+    <li>
+      <p>{{ product.description }}</p>
+      <p>Preço: {{ product.price }}</p>
+      <p>Estoque: {{ product.stock }}</p>
+      <p><a class="btn btn-primary" href="{% url 'buy' product.id %}">Comprar</a></p>
+    </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

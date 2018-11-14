@@ -9,6 +9,7 @@ services:
       - "8000:8000"
     environment:
       DJANGO_SETTINGS_MODULE: coffee_shop.development_settings
+      MY_EMAIL_PASS: ${MY_EMAIL_PASS}
     depends_on:
       - db
 
