@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.views.generic import ListView
 
 from .exceptions import InsuficientStock
+from .forms import ContactForm
 from .models import Product
 from .services import ProductService
 
@@ -30,6 +31,16 @@ def buy_product(request, pk):
     return redirect(reverse('list-2'))
 
 
+def contract_form_action(request):
+    form = ContactForm(request.POST)
+    products = Product.objects.all()
+
+    if form.is_valid():
+        messages.success(request, 'E-mail enviado com sucesso!')
+
+    return render(request, 'product/product_list.html', {'form': form, 'object_list': products})
+
+
 # CBVs
 class ProductListView(ListView):
     model = Product
@@ -37,3 +48,8 @@ class ProductListView(ListView):
 
     # def get_queryset(self):
     #    return Product.objects.all().order_by('-price')
+
+    def get_context_data(self, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context['form'] = ContactForm()
+        return context

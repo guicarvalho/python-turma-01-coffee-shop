@@ -1,0 +1,9 @@
+{% load static %}
+
+<div class="item-product">
+  <img class="round" src="{% static "img/coffee.png" %}">
+  <p>{{ product.description }}</p>
+  <hr>
+  <h3>R$ {{ product.price }}</h3>
+  <button class="btn btn-buy"><a href="{% url 'buy' product.id %}">COMPRAR</a></button>
+</div>

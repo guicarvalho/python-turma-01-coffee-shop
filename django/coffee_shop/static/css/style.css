@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: 'Gruppo', cursive;
+  background-color: #a9977e;
+  font-size: 1.4em;
+}
+/*********Menu*********/
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #a9977e;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none; 
+  font-size: 1.2em;
+}
+.topnav .active {  
+  color: #a9977e;
+  display: inline;
+  font-family: 'Berkshire Swash', cursive;
+  background-color: black;
+  padding: 10px;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav a:not(:first-child) {
+    float: right;
+}
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+.topnav.responsive {position: relative;}
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+.topnav .active .logo {
+  display: none;
+}
+.topnav .active .logo-mobile{
+  display: block;
+}
+/*********Product*********/
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.products > div {
+margin: 20px 60px;
+text-align: center;
+}
+.item-product{
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #000;
+    padding: 20px;
+}
+/*********Image*********/
+.round {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  color: #FFF;
+  border-radius: 50%;
+}
+.small-round{
+width: 70px;
+height: 70px;
+}
+/*********Input*********/
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 2px;
+  display: block;
+}
+/*********Label*********/
+.label-form {
+display: inline-block;
+width: 90px;
+vertical-align: top;
+margin-top:10px;
+}
+/*********Contact*********/
+#contact {
+  background-color: #000;
+  color:#a9977e;
+  padding: 20px 0px;
+}
+form{
+width: 70%;
+margin: 0 auto;
+}
+.text-center{
+  text-align: center;
+}
+hr{
+  border-color: #000;
+}
+.center-btn{
+text-align: center;
+}
+p{
+  margin: 0px;
+}
+/*********Button*********/
+.btn{
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 1.2em;
+  font-family: 'Gruppo', cursive;
+}
+.btn-send{
+  background-color: #a9977e;
+  color:#000;
+  border-color: #a9977e;
+}
+.btn-buy{
+  background-color: #000;
+  color:#a9977e;
+  border-color: #000;
+}
+.btn-buy a{
+text-decoration:none; 
+color: #a9977e;;
+}
+/*********Table*********/
+.customers {
+border-collapse: collapse;
+width: 100%;
+margin-top: 20px;
+padding: 20px;
+border: 1px solid #ddd;
+width: 80% !important; 
+margin: auto;
+border-spacing: 0;
+}
+.customers td, .customers th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+.customers tr:nth-child(even) {background: #CCC}
+.customers tr:nth-child(odd) {background: #FFF}
+.customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #000;
+color: white;
+}
+.table-responsive{
+width: 100%;
+overflow-x:auto;
+}
+.customers tr {
+  margin-top: 20px;
+  margin-bottom: 20px !important;
+}
+.total{
+font-weight: bold;
+}
+.sell{
+margin-top: 20px;
+}
+/*********Logo*********/
+.logo {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .topnav a:not(:first-child) {display: block;}
+  .topnav a.icon {
+    display: none;
+  }
+  .topnav.responsive {display: none;}
+  .topnav.responsive .icon {
+    display: none;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: none;
+    text-align: left;
+  }
+  .topnav .active .logo {
+    display: block;
+  }
+  
+  .topnav .active .logo-mobile{
+    display: none;
+  }
+  .logo-mobile{
+    display: none
+  }
+  .logo {
+      display: block;
+  }
+  
+  form{
+    width: 50%;
+  }
+}
+
+.errorlist {
+    background: #F08080;
+    color: #000;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}

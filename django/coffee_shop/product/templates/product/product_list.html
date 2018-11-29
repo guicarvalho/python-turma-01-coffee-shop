@@ -1,19 +1,26 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<div class="row">
-  <div class="col-md-12">
-    <h1>Produtos</h1>
-    <ul>
+<section id="products">
+  <h1 class="text-center">Produtos</h1>
+  <p class="text-center">Experimente o melhor café do Brasil!</p>
+  <div class="products">
     {% for product in object_list %}
-    <li>
-      <p>{{ product.description }}</p>
-      <p>Preço: {{ product.price }}</p>
-      <p>Estoque: {{ product.stock }}</p>
-      <p><a class="btn btn-primary" href="{% url 'buy' product.id %}">Comprar</a></p>
-    </li>
+      {% include "product/product_fragment.html" with product=product %}
     {% endfor %}
-    </ul>
   </div>
-</div>
+</section>
+
+<section id="contact">
+  <h1 class="text-center">Contato</h1>
+  <form action="{% url "contact" %}" method="post" novalidate>{% csrf_token %}
+    {% for field in form.visible_fields %}
+      {{ field.label_tag }} {{ field }}
+      <span class="error">{{ field.errors }}</span>
+    {% endfor %}
+    <div class="center-btn">
+      <input type="submit" class="btn btn-send" value="ENVIAR">
+    </div>
+  </form>
+</section>
 {% endblock %}
